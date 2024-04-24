@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 import HomeCarousel from "../components/HomeCarousel";
 import styled from "styled-components";
 import HomeCards from "../components/HomeCards";
-import HomeMaterialCards from "../components/materialdemo/HomeMaterialCards";
-
 
 const Home = () => {
   return (
@@ -22,7 +20,6 @@ const Home = () => {
         We present to you our most populars recipe among our customers
       </PopularRecipe>
       <HomeCards />
-      <HomeMaterialCards />
     </Fragment>
   );
 };
