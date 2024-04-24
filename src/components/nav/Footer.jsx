@@ -11,41 +11,40 @@ import {
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+
   return (
-    <div>
-      <FooterContainer>
-        <FooterContent>
-          <Section>
-            <FaHome />
-            <FooterLink to="/">Home</FooterLink>
-          </Section>
-          <Section>
-            <FaInfoCircle />
-            <FooterLink to="/aboutus">AboutUs</FooterLink>
-          </Section>
-          <Section>
-            <FaUtensils />
-            <FooterLink to="/recipes">Recipes</FooterLink>
-          </Section>
-          <Section>
-            <FaPhone />
-            <FooterLink to="/contacts">Contacts</FooterLink>
-          </Section>
-          <SocialMedia>
-            <Icon href="#">
-              <FaFacebook />
-            </Icon>
-            <Icon href="#">
-              <FaTwitter />
-            </Icon>
-            <Icon href="#">
-              <FaInstagram />
-            </Icon>
-          </SocialMedia>
-        </FooterContent>
-        <AuthorInfo>All right reserved © 2024</AuthorInfo>
-      </FooterContainer>
-    </div>
+    <FooterContainer>
+      <FooterContent>
+        <Section>
+          <FaHome />
+          <FooterLink to="/">Home</FooterLink>
+        </Section>
+        <Section>
+          <FaInfoCircle />
+          <FooterLink to="/aboutus">AboutUs</FooterLink>
+        </Section>
+        <Section>
+          <FaUtensils />
+          <FooterLink to="/recipes">Recipes</FooterLink>
+        </Section>
+        <Section>
+          <FaPhone />
+          <FooterLink to="/contacts">Contacts</FooterLink>
+        </Section>
+        <SocialMedia>
+          <Icon>
+            <FaFacebook />
+          </Icon>
+          <Icon>
+            <FaTwitter />
+          </Icon>
+          <Icon>
+            <FaInstagram />
+          </Icon>
+        </SocialMedia>
+      </FooterContent>
+      <AuthorInfo>All right reserved © 2024</AuthorInfo>
+    </FooterContainer>
   );
 };
 
@@ -74,6 +73,7 @@ const FooterLink = styled(Link)`
   font-size: 24px;
   color: white;
   text-decoration: none;
+  cursor: pointer;
 `;
 
 const SocialMedia = styled.div`
@@ -81,7 +81,7 @@ const SocialMedia = styled.div`
   align-items: center;
 `;
 
-const Icon = styled.a`
+const Icon = styled(Link)`
   color: #fff;
   font-size: 24px;
   margin-right: 10px;
