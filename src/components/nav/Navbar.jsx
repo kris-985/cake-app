@@ -40,21 +40,21 @@ const Wraper = styled.div`
   border-bottom: 2px solid black;
   height: ${({ extendBar }) => (extendBar ? "120px" : "80px")};
 `;
-//
+
 const LogoImage = styled.img`
   margin-left: 50px;
   width: 100px;
   height: 80px;
   cursor: pointer;
 `;
-//
+
 const Navlink = styled(Link)`
   text-decoration: none;
   color: black;
   text-transform: uppercase;
   font-family: cursive;
   font-size: 25px;
-  cursor-pointer;
+  cursor: pointer;
   margin-right: 40px;
   &:hover {
     background-color: pink;

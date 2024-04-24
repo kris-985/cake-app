@@ -5,9 +5,9 @@ const Contacts = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  //TODO
+
   return (
-    <ContactsWithText>
+    <Wrapper>
       <ImageText
         src="https://w0.peakpx.com/wallpaper/761/8/HD-wallpaper-cake-with-chocolate-cream-fruit-cheesecake-berries-sweets-cakes.jpg"
         alt=""
@@ -37,17 +37,17 @@ const Contacts = () => {
         />
         <SubmitButton type="submit">SEND</SubmitButton>
       </Form>
-    </ContactsWithText>
+    </Wrapper>
   );
 };
 
 export default Contacts;
 
-const ContactsWithText = styled.div`
-  position: relative;
+const Wrapper = styled.div`
   width: 100%;
-  max-width: 2500px; /* Променете го според вашите изисквания */
+  max-width: 2500px;
 `;
+
 const ImageText = styled.img`
   padding-top: 20px;
   margin-left: 400px;
@@ -67,15 +67,10 @@ const Form = styled.form`
   flex-direction: column;
   align-items: center;
   position: absolute;
-  top: 50%; /* Ако искате текстът да е по центъра на изображението */
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.8
-  ); /* Прилагайте прозрачност според вашите предпочитания */
+  background-color: rgba(255, 255, 255, 0.8);
   padding: 20px;
   border-radius: 3px;
 `;
