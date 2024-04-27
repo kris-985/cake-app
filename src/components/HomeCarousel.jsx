@@ -3,7 +3,8 @@ import styled from "styled-components";
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 const HomeCarousel = () => {
     return (
-        <Carousel 
+        <Carousel
+        showThumbs={false} 
         dynamicHeight={false} 
         interval={3000}
         autoPlay={true}

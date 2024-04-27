@@ -5,8 +5,6 @@ const HomeCards = () => {
   return (
     <Wrapper>
       <SingleHomeCard />
-      <SingleHomeCard />
-      <SingleHomeCard />
     </Wrapper>
   );
 };

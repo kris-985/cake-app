@@ -1,24 +1,28 @@
 import styled from "styled-components";
 import { recipesobject } from "../services/recipesobject";
+import { Fragment } from "react";
 
 const SingleHomeCard = () => {
-  console.log(Object.keys(recipesobject));
-
   return (
-    <ContainerOne>
-      <WrapperOne>
-        <BannerImage></BannerImage>
-        <HeaderOne>{Object.keys(recipesobject)}</HeaderOne>
-        <ParagraphOne>
-          Lorem ipsum dolor sit amet, <br />
-          consectetur adipiscing elit.
-        </ParagraphOne>
-      </WrapperOne>
-      <ButtonWrapper>
-        <ButtonOutline>DETAILS</ButtonOutline>
-        <ButtonFill>BUY NOW</ButtonFill>
-      </ButtonWrapper>
-    </ContainerOne>
+    <Fragment>
+      {Object.entries(recipesobject).map(([title, recipe]) => (
+        <ContainerOne key={title}>
+          <WrapperOne>
+            <BannerImage></BannerImage>
+            <HeaderOne>{title}</HeaderOne>
+            <ParagraphOne>
+              Author:{recipe.author} <br />
+              Ingredients:{recipe.ingredients} <br />
+              Recipe: {recipe.recipe}
+            </ParagraphOne>
+          </WrapperOne>
+          <ButtonWrapper>
+            <ButtonOutline>DETAILS</ButtonOutline>
+            <ButtonFill>BUY NOW</ButtonFill>
+          </ButtonWrapper>
+        </ContainerOne>
+      ))}
+    </Fragment>
   );
 };
 
