@@ -1,20 +1,27 @@
 import styled from "styled-components";
 import { recipesobject } from "../services/recipesobject";
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
+import { getRecipes } from "../services/recipesData";
+import { useEffect } from "react";
 
 const SingleHomeCard = () => {
+  const [recipes, setRecipes] = useState();
+  useEffect(() => {
+    fetch('www.themealdb.com/api/json/v1/1/filter.php?c=Dessert')
+    .then(res=>res.json())
+    .then(data=> console.log(data))
+  }, []);
+
+
   return (
     <Fragment>
-      {Object.entries(recipesobject).map(([title, recipe]) => (
+      {recipes && Object.entries(recipes).map(([title, recipe]) => (
         <ContainerOne key={title}>
           <WrapperOne>
             <BannerImage></BannerImage>
             <HeaderOne>{title}</HeaderOne>
-            <ParagraphOne>
-              Author:{recipe.author} <br />
-              Ingredients:{recipe.ingredients} <br />
-              Recipe: {recipe.recipe}
-            </ParagraphOne>
+            <ParagraphOne>{title}</ParagraphOne>
+            {/* <ParagraphOne>{recipe}</ParagraphOne> */}
           </WrapperOne>
           <ButtonWrapper>
             <ButtonOutline>DETAILS</ButtonOutline>
