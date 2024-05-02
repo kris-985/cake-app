@@ -1,27 +1,31 @@
 import styled from "styled-components";
-import { recipesobject } from "../services/recipesobject";
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
+import { getRecipes } from "../services/recipesData";
+import { useEffect } from "react";
 
 const SingleHomeCard = () => {
+  const [recipes, setRecipes] = useState();
+
+  useEffect(() => {
+    fetch("https://www.themealdb.com/api/json/v1/1/filter.php?i=vanilla")
+      .then((res) => res.json())
+      .then(setRecipes);
+  }, []);
+ recipes && console.log(recipes.meals);
   return (
     <Fragment>
-      {Object.entries(recipesobject).map(([title, recipe]) => (
-        <ContainerOne key={title}>
-          <WrapperOne>
-            <BannerImage></BannerImage>
-            <HeaderOne>{title}</HeaderOne>
-            <ParagraphOne>
-              Author:{recipe.author} <br />
-              Ingredients:{recipe.ingredients} <br />
-              Recipe: {recipe.recipe}
-            </ParagraphOne>
-          </WrapperOne>
-          <ButtonWrapper>
-            <ButtonOutline>DETAILS</ButtonOutline>
-            <ButtonFill>BUY NOW</ButtonFill>
-          </ButtonWrapper>
-        </ContainerOne>
-      ))}
+      {recipes &&
+       recipes.meals.map((recipe) => (
+          <ContainerOne key={recipe.idMeal}>
+            <WrapperOne>
+              <BannerImage imageUrl={recipe.strMealThumb}/>
+              <HeaderOne>{recipe.strMeal}</HeaderOne>
+            </WrapperOne>
+            <ButtonWrapper>
+              <ButtonOutline>DETAILS</ButtonOutline>
+            </ButtonWrapper>
+          </ContainerOne>
+        ))}
     </Fragment>
   );
 };
@@ -49,7 +53,7 @@ const WrapperOne = styled.div`
 `;
 
 const BannerImage = styled.div`
-  background-image: url(https://images.unsplash.com/photo-1641326201918-3cafc641038e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80);
+background-image: ${({ imageUrl }) => (imageUrl ? `url(${imageUrl})` : 'url(https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png)')};
   background-position: center;
   background-size: cover;
   height: 300px;
