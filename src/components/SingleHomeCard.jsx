@@ -53,7 +53,7 @@ const WrapperOne = styled.div`
 `;
 
 const BannerImage = styled.div`
-  background-image: ${({imageUrl}) => (imageUrl ? `url(${imageUrl})` : 'url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png')};
+background-image: ${({ imageUrl }) => (imageUrl ? `url(${imageUrl})` : 'url(https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png)')};
   background-position: center;
   background-size: cover;
   height: 300px;
