@@ -1,14 +1,16 @@
-import  { Fragment } from "react";
+import { Fragment } from "react";
 import { Link } from "react-router-dom";
 import HomeCarousel from "../components/HomeCarousel";
 import styled from "styled-components";
 import HomeCards from "../components/HomeCards";
 
 const Home = () => {
+  
   return (
     <Fragment>
       <Title>Cake App - Where you eat with your eyes first</Title>
       <HomeCarousel />
+      <EmptyDiv />
       <AboutUsWrapper>
         <Image src="https://images.alphacoders.com/133/1338482.png" alt="" />
         <Text>
@@ -32,6 +34,14 @@ const Title = styled.h1`
   text-align: center;
 `;
 
+const EmptyDiv = styled.div`
+  height: 350px;
+  background-image: url("https://t4.ftcdn.net/jpg/03/71/75/93/360_F_371759398_mwc6nYPLfDt0gihNkURp64vDhVQw1qUd.jpg");
+  background-size: cover;
+  backgroung-position: center;
+  width: 100%;
+`;
+
 const AboutUsWrapper = styled.div`
   display: flex;
   background-image: url("https://images7.alphacoders.com/956/956230.jpg");
@@ -52,7 +62,7 @@ const Image = styled.img`
 `;
 
 const Text = styled.p`
-  background-color: rgba( 250, 250, 250, 1);
+  background-color: rgba(250, 250, 250, 1);
   font-family: cursive;
   font-size: 30px;
   color: #333; /* Променете го според вашите предпочитания */

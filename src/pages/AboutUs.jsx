@@ -109,6 +109,7 @@ const ImageRight = styled.img`
 const Button = styled.button`
     margin-top: 10px;
     margin-left: 20px;
+    margin-bottom: 20px;
     display: block;
     padding: 10px 20px;
     background-color: red;
