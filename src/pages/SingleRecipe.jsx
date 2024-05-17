@@ -1,37 +1,40 @@
 import { Fragment, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
-import { addRecipes } from "../slices/recipesSlice";
+import { viewSingleRecipe } from "../slices/recipesSlice";
 
 const SingleRecipe = () => {
-  const { recipeId, allRecipes } = useSelector((state) => state.recipesReducer);
+  const { recipeId, singleRecipe } = useSelector(
+    (state) => state.recipesReducer
+  );
   const dispatch = useDispatch();
 
   useEffect(() => {
     if (recipeId) {
       fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${recipeId}`)
         .then((res) => res.json())
-        .then((data) => dispatch(addRecipes(data)));
+        .then((data) => dispatch(viewSingleRecipe(data)));
     }
   }, [recipeId, dispatch]);
 
+  console.log(singleRecipe);
+
   return (
     <Fragment>
-      { allRecipes.length > 0 &&
-        allRecipes.map((recipe, i) => (
-          <div key={recipe[i].strMeal}>
-            <Title>{recipe[i].strMeal}</Title>
-            <Container>
-              <Picture imageUrl={recipe[i].strMealThumb} />
-              <Ingredients>
-                {recipe[i].strIngredient1} - {recipe[i].strMeasure1}
-              </Ingredients>
-              <Category>{recipe[i].strCategory}</Category>
-              <Area>{recipe[i].strArea}</Area>
-            </Container>
-            <Instructions>{recipe[i].strInstructions}</Instructions>
-          </div>
-        ))}
+      {singleRecipe && (
+        <div key={singleRecipe[0].strMeal}>
+          <Title>{singleRecipe[0].strMeal}</Title>
+          <Container>
+            <Picture imageUrl={singleRecipe[0].strMealThumb} />
+            <Ingredients>
+              {singleRecipe[0].strIngredient1} - {singleRecipe[0].strMeasure1}
+            </Ingredients>
+            <Category>{singleRecipe[0].strCategory}</Category>
+            <Area>{singleRecipe[0].strArea}</Area>
+          </Container>
+          <Instructions>{singleRecipe[0].strInstructions}</Instructions>
+        </div>
+      )}
     </Fragment>
   );
 };
