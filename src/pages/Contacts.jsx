@@ -44,53 +44,73 @@ const Contacts = () => {
 export default Contacts;
 
 const Wrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  max-width: 2500px;
+  height: 100vh; 
+  position: relative;
 `;
 
 const ImageText = styled.img`
-  padding-top: 20px;
-  margin-left: 400px;
-  width: 1200px;
-  height: 800px;
-  border-radius: 3%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
 `;
 
 const Title = styled.h2`
-  font-family: cursive
+  font-family: cursive;
   font-size: 24px;
   margin-bottom: 20px;
+  z-index: 2;
 `;
 
 const Form = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
+  z-index: 2;
   background-color: rgba(255, 255, 255, 0.8);
   padding: 20px;
   border-radius: 3px;
+
+  @media (max-width: 768px) {
+    width: 90%;
+    padding: 15px;
+  }
 `;
 
 const InputField = styled.input`
-  width: 900px;
+  width: 600px;
+  max-width: 900px;
   height: 40px;
   margin-bottom: 10px;
   padding: 5px;
   font-size: 16px;
   border-radius: 2px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const MessageField = styled.textarea`
-  width: 900px;
+  width: 600px;
+  max-width: 900px;
   height: 120px;
   margin-bottom: 10px;
   padding: 5px;
   font-size: 16px;
   border-radius: 2px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const SubmitButton = styled.button`

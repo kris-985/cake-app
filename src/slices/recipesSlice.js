@@ -15,7 +15,7 @@ export const recipesReducer = createSlice({
     addRecipes: (state, action) => {
       const recipes = action.payload;
       state.homeRecipes = Object.keys(recipes.meals)
-        .slice(0, 5)
+        .slice(0, 8)
         .map((key) => ({ [key]: recipes.meals[key] }));
       state.allRecipes = Object.keys(recipes.meals).map((key) => ({
         [key]: recipes.meals[key],

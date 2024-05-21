@@ -40,8 +40,25 @@ export default HomeCarousel;
 
 const CarouselImage = styled.img`
   border-radius: 2%;
-  width: 1000px !important;
-  height: 600px !important;
+  width: 100%;
+  height: auto;
+  max-width: 1000px;
+  max-height: 600px;
   background-size: cover;
   image-rendering: -webkit-optimize-contrast;
+
+  @media (max-width: 1200px) {
+    max-width: 800px;
+    max-height: 480px;
+  }
+
+  @media (max-width: 768px) {
+    max-width: 600px;
+    max-height: 360px;
+  }
+
+  @media (max-width: 480px) {
+    max-width: 100%;
+    height: 150px;
+  }
 `;
