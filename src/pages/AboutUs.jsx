@@ -51,52 +51,100 @@ const Header = styled.h1`
   font-family: cursive;
   font-size: 30px;
   text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 24px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 20px;
+  }
 `;
-// Стилизиране на основния контейнер
+
 const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 10px;
+  }
 `;
 
-// Стилизиране на секцията за снимката
 const ImageSection = styled.div`
   flex: 1;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
-// Стилизиране на секцията за текста
 const TextSection = styled.div`
   flex: 1;
   padding: 0 30px;
+
+  @media (max-width: 768px) {
+    padding: 10px 0;
+  }
 `;
 
-// Стилизиране на снимката
 const Image = styled.img`
   margin-left: 20px;
   max-width: 100%;
   height: 450px;
   border-radius: 2%;
+
+  @media (max-width: 768px) {
+    margin-left: 0;
+    height: auto;
+  }
+
+  @media (max-width: 480px) {
+    width: 100%;
+    height: auto;
+  }
 `;
 
-// Стилизиране на текста
 const Text = styled.p`
   font-family: cursive;
   font-size: 30px;
   line-height: 2;
+
+  @media (max-width: 768px) {
+    font-size: 24px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 20px;
+  }
 `;
-// Втори контейнер 
+
 const ContainerSecond = styled.div`
   display: flex;
   align-items: center;
+
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+  }
 `;
 
 const TextSecond = styled.div`
   flex: 1;
   font-family: cursive;
-  Font-size: 30px;
+  font-size: 30px;
   padding: 0 20px;
   line-height: 2;
+
+  @media (max-width: 768px) {
+    font-size: 24px;
+    padding: 10px 0;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 20px;
+  }
 `;
 
 const ImageRight = styled.img`
@@ -104,25 +152,42 @@ const ImageRight = styled.img`
   height: 500px;
   max-width: 100%;
   border-radius: 2%;
+
+  @media (max-width: 768px) {
+    margin-right: 0;
+    height: auto;
+  }
+
+  @media (max-width: 480px) {
+    width: 100%;
+    height: auto;
+  }
 `;
 
 const Button = styled.button`
-    margin-top: 10px;
-    margin-left: 20px;
-    margin-bottom: 20px;
-    display: block;
-    padding: 10px 20px;
-    background-color: red;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  display: block;
+  padding: 10px 20px;
+  background-color: red;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
 
-    &:hover {
-        background-color: #0056b3;
-    }`
+  &:hover {
+    background-color: #0056b3;
+  }
 
-    const RecipeLink = styled(Link)`
-    color: white;
-    text-decoration: none;
-    `
+  @media (max-width: 480px) {
+    width: 100%;
+    padding: 10px 0;
+    margin-left: 0;
+  }
+`;
+
+const RecipeLink = styled(Link)`
+  color: white;
+  text-decoration: none;
+`;

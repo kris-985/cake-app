@@ -3,7 +3,7 @@ import {
   FaHome,
   FaInfoCircle,
   FaUtensils,
-  FaPhone,
+  FaPhoneAlt,
   FaFacebook,
   FaTwitter,
   FaInstagram,
@@ -28,7 +28,7 @@ const Footer = () => {
           <FooterLink to="/recipes">Recipes</FooterLink>
         </Section>
         <Section>
-          <FaPhone />
+          <FaPhoneAlt />
           <FooterLink to="/contacts">Contacts</FooterLink>
         </Section>
         <SocialMedia>
@@ -60,11 +60,22 @@ const FooterContent = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap; 
+
+  @media (max-width: 768px) {
+    flex-direction: column; 
+    align-items: center; 
+  }
 `;
 
 const Section = styled.div`
   display: flex;
   align-items: center;
+  margin: 10px 0; 
+
+  @media (max-width: 768px) {
+    justify-content: center; 
+  }
 `;
 
 const FooterLink = styled(Link)`
@@ -74,11 +85,20 @@ const FooterLink = styled(Link)`
   color: white;
   text-decoration: none;
   cursor: pointer;
+
+  @media (max-width: 768px) {
+    font-size: 20px; 
+  }
 `;
 
 const SocialMedia = styled.div`
   display: flex;
   align-items: center;
+  margin: 10px 0; 
+
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
 `;
 
 const Icon = styled(Link)`
@@ -90,6 +110,11 @@ const Icon = styled(Link)`
   &:hover {
     color: #ffd700;
   }
+
+  @media (max-width: 768px) {
+    font-size: 20px; 
+    margin-right: 5px; 
+  }
 `;
 
 const AuthorInfo = styled.div`
@@ -100,4 +125,7 @@ const AuthorInfo = styled.div`
   border-top: 1px solid white;
   font-family: cursive;
   font-size: 24px;
+
+  @media (max-width: 768px) {
+    font-size: 20px; 
 `;

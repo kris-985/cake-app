@@ -1,17 +1,21 @@
 /* eslint-disable react/prop-types */
 import styled from "styled-components";
 import { Fragment } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { changeId } from "../slices/recipesSlice";
 import { Link } from "react-router-dom";
 
 const SingleRecipeCard = ({ recipes }) => {
+  const { recipeId } = useSelector(
+    (state) => state.recipesReducer
+  );
   const dispatch = useDispatch();
 
   const setId = (id) => {
     dispatch(changeId(id));
   };
-
+  
+console.log(recipeId);
   return (
     <Fragment>
       {Object.keys(recipes).length &&
