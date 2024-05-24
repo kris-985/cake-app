@@ -1,21 +1,18 @@
 /* eslint-disable react/prop-types */
 import styled from "styled-components";
 import { Fragment } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch} from "react-redux";
 import { changeId } from "../slices/recipesSlice";
 import { Link } from "react-router-dom";
 
 const SingleRecipeCard = ({ recipes }) => {
-  const { recipeId } = useSelector(
-    (state) => state.recipesReducer
-  );
   const dispatch = useDispatch();
 
   const setId = (id) => {
     dispatch(changeId(id));
   };
   
-console.log(recipeId);
+
   return (
     <Fragment>
       {Object.keys(recipes).length &&
@@ -86,12 +83,13 @@ font-size: 12px;
 font-size: 0.8rem;
 letter-spacing: 2px;
 cursor: pointer;
-background: transparent;
-color: rgba(0, 212, 255, 0.9);
-border: 1px solid rgba(0, 212, 255, 0.6);
+background: grey;
+color: white;
+border: 1px solid grey;
 transition: all 0.3s ease;
 &:hover{
   transform: scale(1.125);
+  background-color: #333;
   color: rgba(255, 255, 255, 0.9);
-  border-color: rgba(255, 255, 255, 0.9);
+  border-color: white;
   transition: all .3s ease; `;
