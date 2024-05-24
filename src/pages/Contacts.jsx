@@ -116,14 +116,10 @@ const MessageField = styled.textarea`
 const SubmitButton = styled.button`
   width: 200px;
   height: 40px;
-  background-color: #007bff;
+  background-color: #333;
   color: white;
   border: none;
   border-radius: 5px;
   font-size: 18px;
   cursor: pointer;
-
-  &:hover {
-    background-color: #0056b3;
-  }
 `;

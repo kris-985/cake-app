@@ -33,7 +33,7 @@ display: block;
 margin: 0 auto;
 margin-bottom: 10px;
 padding: 10px 20px;
-background-color: red;
+background-color: #333;
 color: #ffffff;
 border: none;
 border-radius: 5px;
@@ -44,9 +44,6 @@ text-align: center;
 text-decoration: none;
 transition: background-color 0.3s ease;
 
-&:hover {
-  background-color: #0056b3;
-}
 `;
 
 const RecipesLink = styled(Link)`
