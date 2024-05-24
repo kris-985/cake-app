@@ -170,15 +170,11 @@ const Button = styled.button`
   margin-bottom: 20px;
   display: block;
   padding: 10px 20px;
-  background-color: red;
+  background-color: #333;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   text-decoration: none;
-
-  &:hover {
-    background-color: #0056b3;
-  }
 
   @media (max-width: 480px) {
     width: 100%;
