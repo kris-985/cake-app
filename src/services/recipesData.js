@@ -20,7 +20,6 @@ export const getIngredients = (recipe) => {
       const measure = recipe[0][`strMeasure${i + 1}`];
       return ingredient ? { ingredient: ingredient, measure: measure } : null;
     });
-	console.log(recipe);
-	console.log(ingredients);
+
   return ingredients;
 };
