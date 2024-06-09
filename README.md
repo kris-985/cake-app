@@ -1,5 +1,7 @@
 Cake App is a web application where you can see random desserts. If you don’t know what to cook tonight or you just have “ a cheat day “, this is the right place for you! This app is SPA with the help of react, styled components, some libraries like react-icons, react-carousel for the design and redux for managing the state.
 
+Link to the project: cake-app-vercel.vercel.app
+
 Features
 
 Random Desserts: Browse through a variety of random dessert recipes.
