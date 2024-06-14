@@ -48,10 +48,6 @@ const Card = styled.div`
   align-items: center;
   justify-content: center;
   text-align: center;
-
-  @media (max-width: 768px) {
-    padding: 20px;
-  }
 `;
 
 const CardImage = styled.img`
@@ -65,21 +61,13 @@ const CardImage = styled.img`
   width: 300px;
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.255);
-
-  @media (max-width: 768px) {
-    height: 200px;
-    width: 200px;
-  }
 `;
 
 const CardTitle = styled.h2`
   font-family: "Righteous", sans-serif;
   color: rgba(255, 255, 255, 0.98);
-  font-size: 20px;
 
-  @media (max-width: 768px) {
-    font-size: 16px;
-  }
+  font-size: 20px;
 `;
 
 const ButtonWrapperFirst = styled.div`
@@ -88,28 +76,20 @@ const ButtonWrapperFirst = styled.div`
 `;
 
 const CardButton = styled.button`
-  border: none;
-  padding: 12px 24px;
-  border-radius: 24px;
-  font-size: 12px;
-  font-size: 0.8rem;
-  letter-spacing: 2px;
-  cursor: pointer;
-  background: grey;
-  color: white;
-  border: 1px solid grey;
-  transition: all 0.3s ease;
-
-  &:hover {
-    transform: scale(1.125);
-    background-color: #333;
-    color: rgba(255, 255, 255, 0.9);
-    border-color: white;
-    transition: all .3s ease;
-  }
-
-  @media (max-width: 768px) {
-    padding: 10px 20px;
-    font-size: 10px;
-  }
-`;
+border: none;
+padding: 12px 24px;
+border-radius: 24px;
+font-size: 12px;
+font-size: 0.8rem;
+letter-spacing: 2px;
+cursor: pointer;
+background: grey;
+color: white;
+border: 1px solid grey;
+transition: all 0.3s ease;
+&:hover{
+  transform: scale(1.125);
+  background-color: #333;
+  color: rgba(255, 255, 255, 0.9);
+  border-color: white;
+  transition: all .3s ease; `;

@@ -18,7 +18,7 @@ const HomeCarousel = () => {
         <CarouselImage src="https://static.vecteezy.com/system/resources/previews/033/756/040/large_2x/happy-birthday-cake-hd-wallpaper-ai-generated-photo.jpg" />
       </div>
       <div>
-        <CarouselImage src="https://w0.peakpx.com/wallpaper/226/456/HD-wallpaper-chocolate-cake-dessert-sweets-cake-chocolate.jpg" />
+        <CarouselImage src="https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=600" />
       </div>
       <div>
         <CarouselImage src="https://images6.alphacoders.com/434/434430.jpg" />

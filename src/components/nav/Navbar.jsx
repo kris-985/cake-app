@@ -42,29 +42,6 @@ const Wrapper = styled.div`
   height: 80px;
   position: relative;
 
-  @media (max-width: 1200px) {
-    padding: 0 15px;
-    height: 70px;
-  }
-
-  @media (max-width: 992px) {
-    padding: 0 10px;
-    height: 60px;
-  }
-
-  @media (max-width: 768px) {
-    padding: 0 5px;
-    height: 50px;
-  }
-
-  @media (max-width: 480px) {
-    flex-direction: column;
-    height: ${({ extendBar }) => (extendBar ? "240px" : "40px")};
-    ${({ extendBar }) => extendBar && "padding-top: 10px;"};
-    justify-content: center;
-    align-items: flex-end;
-  }
-
   @media (max-width: 400px) {
     justify-content: center;
     align-items: flex-end;
@@ -79,21 +56,6 @@ const LogoImage = styled.img`
   height: 80px;
   cursor: pointer;
 
-  @media (max-width: 1200px) {
-    width: 90px;
-    height: 70px;
-  }
-
-  @media (max-width: 992px) {
-    width: 80px;
-    height: 60px;
-  }
-
-  @media (max-width: 768px) {
-    width: 70px;
-    height: 50px;
-  }
-
   @media (max-width: 480px) {
     display: none;
   }
@@ -102,24 +64,6 @@ const LogoImage = styled.img`
 const NavLinks = styled.div`
   display: flex;
   align-items: center;
-
-  @media (max-width: 1200px) {
-    gap: 30px;
-  }
-
-  @media (max-width: 992px) {
-    gap: 20px;
-  }
-
-  @media (max-width: 768px) {
-    gap: 10px;
-  }
-
-  @media (max-width: 480px) {
-    flex-direction: column;
-    width: 100%;
-    display: ${({ extendBar }) => (extendBar ? "flex" : "none")};
-  }
 
   @media (max-width: 400px) {
     flex-direction: column;
@@ -142,25 +86,6 @@ const Navlink = styled(Link)`
     color: white;
   }
 
-  @media (max-width: 1200px) {
-    font-size: 22px;
-    margin-right: 30px;
-  }
-
-  @media (max-width: 992px) {
-    font-size: 20px;
-    margin-right: 20px;
-  }
-
-  @media (max-width: 768px) {
-    font-size: 18px;
-    margin-right: 10px;
-  }
-
-  @media (max-width: 480px) {
-    margin: 10px 0;
-  }
-
   @media (max-width: 400px) {
     margin: 10px 0;
   }
@@ -170,10 +95,6 @@ const MenuWrapper = styled.span`
   cursor: pointer;
   display: none;
   position: relative;
-
-  @media (max-width: 480px) {
-    display: block;
-  }
 
   @media (max-width: 400px) {
     display: block;

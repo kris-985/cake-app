@@ -19,21 +19,4 @@ const Container = styled.div`
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
-
-  @media (max-width: 1200px) {
-    justify-content: flex-start;
-  }
-
-  @media (max-width: 992px) {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  @media (max-width: 768px) {
-    justify-content: space-between;
-  }
-
-  @media (max-width: 576px) {
-    justify-content: center;
-  }
 `;

@@ -58,12 +58,12 @@ const Title = styled.h1`
   text-align: center;
   font-size: 2em;
 
-  @media (max-width: 480px) {
-    font-size: 1.2em;
-  }
-
   @media (max-width: 768px) {
     font-size: 1.5em;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.2em;
   }
 `;
 
@@ -71,11 +71,6 @@ const Container = styled.div`
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-
-  @media (max-width: 480px) {
-    flex-direction: column;
-    align-items: center;
-  }
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -93,23 +88,27 @@ const Picture = styled.div`
   height: 500px;
   width: 500px;
 
+  @media (max-width: 768px) {
+    height: 400px;
+    width: 400px;
+  }
+
   @media (max-width: 480px) {
     height: 300px;
     width: 300px;
   }
-
 `;
 
 const Text = styled.p`
   font-family: cursive;
   font-size: 20px;
 
-  @media (max-width: 480px) {
-    font-size: 16px;
-  }
-
   @media (max-width: 768px) {
     font-size: 18px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 16px;
   }
 `;
 
@@ -123,17 +122,26 @@ const ContInstructions = styled.div`
   margin-left: 10px;
   margin-top: 15px;
 
-  @media (max-width: 480px) {
-    font-size: 16px;
-    margin-left: 3px;
-    margin-top: 8px;
-  }
-
   @media (max-width: 768px) {
     font-size: 18px;
     margin-left: 5px;
     margin-top: 10px;
   }
+
+  @media (max-width: 480px) {
+    font-size: 16px;
+    margin-left: 3px;
+    margin-top: 8px;
+  }
 `;
 
 const Instructions = styled(Text)``;
+
+//IdMeal
+// strMeal-Името
+// StrCategory-Пиле
+// strArea-Произход
+// strInstructions-Инструкции
+// "strMealThumb-Снимка
+// "strIngredient1-Продукти
+// "strMeasure1-Грамаж

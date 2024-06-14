@@ -38,14 +38,9 @@ const AboutUs = () => {
           world of refined taste and create moments that will make your occasion
           truly special.
         </TextSecond>
-        <ImageRight
-          src="https://w0.peakpx.com/wallpaper/43/1001/HD-wallpaper-piece-of-cake-cake-dessert-sweets-fruit-cake-thumbnail.jpg"
-          alt=""
-        />
+        <ImageRight src="https://w0.peakpx.com/wallpaper/43/1001/HD-wallpaper-piece-of-cake-cake-dessert-sweets-fruit-cake-thumbnail.jpg" alt="" />
       </ContainerSecond>
-      <Button>
-        <RecipeLink to="/recipes">Check out the recipes</RecipeLink>
-      </Button>
+      <Button><RecipeLink to="/recipes">Check out the recipes</RecipeLink></Button>
     </div>
   );
 };
@@ -57,12 +52,12 @@ const Header = styled.h1`
   font-size: 30px;
   text-align: center;
 
-  @media (max-width: 480px) {
-    font-size: 20px;
-  }
-
   @media (max-width: 768px) {
     font-size: 24px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 20px;
   }
 `;
 
@@ -72,23 +67,14 @@ const Container = styled.div`
   justify-content: center;
   padding: 20px;
 
-  @media (max-width: 480px) {
-    padding: 10px;
-    flex-direction: column;
-  }
-
   @media (max-width: 768px) {
-    padding: 10px;
     flex-direction: column;
+    padding: 10px;
   }
 `;
 
 const ImageSection = styled.div`
   flex: 1;
-
-  @media (max-width: 480px) {
-    width: 100%;
-  }
 
   @media (max-width: 768px) {
     width: 100%;
@@ -98,10 +84,6 @@ const ImageSection = styled.div`
 const TextSection = styled.div`
   flex: 1;
   padding: 0 30px;
-
-  @media (max-width: 480px) {
-    padding: 10px 0;
-  }
 
   @media (max-width: 768px) {
     padding: 10px 0;
@@ -114,14 +96,13 @@ const Image = styled.img`
   height: 450px;
   border-radius: 2%;
 
-  @media (max-width: 480px) {
+  @media (max-width: 768px) {
     margin-left: 0;
-    width: 100%;
     height: auto;
   }
 
-  @media (max-width: 768px) {
-    margin-left: 0;
+  @media (max-width: 480px) {
+    width: 100%;
     height: auto;
   }
 `;
@@ -131,22 +112,18 @@ const Text = styled.p`
   font-size: 30px;
   line-height: 2;
 
-  @media (max-width: 480px) {
-    font-size: 20px;
-  }
-
   @media (max-width: 768px) {
     font-size: 24px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 20px;
   }
 `;
 
 const ContainerSecond = styled.div`
   display: flex;
   align-items: center;
-
-  @media (max-width: 480px) {
-    flex-direction: column-reverse;
-  }
 
   @media (max-width: 768px) {
     flex-direction: column-reverse;
@@ -160,14 +137,13 @@ const TextSecond = styled.div`
   padding: 0 20px;
   line-height: 2;
 
-  @media (max-width: 480px) {
-    font-size: 20px;
-    padding: 10px 0;
-  }
-
   @media (max-width: 768px) {
     font-size: 24px;
     padding: 10px 0;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 20px;
   }
 `;
 
@@ -177,14 +153,13 @@ const ImageRight = styled.img`
   max-width: 100%;
   border-radius: 2%;
 
-  @media (max-width: 480px) {
+  @media (max-width: 768px) {
     margin-right: 0;
-    width: 100%;
     height: auto;
   }
 
-  @media (max-width: 768px) {
-    margin-right: 0;
+  @media (max-width: 480px) {
+    width: 100%;
     height: auto;
   }
 `;
