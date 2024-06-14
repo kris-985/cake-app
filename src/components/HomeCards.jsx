@@ -10,7 +10,7 @@ const HomeCards = () => {
   return (
     <Fragment>
       <Wrapper>
-        <SingleRecipeCard recipes={homeRecipes}/>
+        <SingleRecipeCard recipes={homeRecipes} />
       </Wrapper>
       <Buttonlink>
         <RecipesLink to="/recipes">Check out the recipes</RecipesLink>
@@ -26,27 +26,39 @@ const Wrapper = styled.div`
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 const Buttonlink = styled.button`
-display: block;
-margin: 0 auto;
-margin-bottom: 10px;
-padding: 10px 20px;
-background-color: #333;
-color: #ffffff;
-border: none;
-border-radius: 5px;
-cursor: pointer;
-font-size: 20px;
-font-family: cursive;
-text-align: center;
-text-decoration: none;
-transition: background-color 0.3s ease;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+  font-family: cursive;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 
+  @media (max-width: 768px) {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
 `;
 
 const RecipesLink = styled(Link)`
   color: white;
   text-decoration: none;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
 `;
