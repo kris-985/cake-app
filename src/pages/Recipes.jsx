@@ -17,23 +17,17 @@ export default Recipes;
 const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
   justify-content: center;
-
-  @media (max-width: 1200px) {
-    justify-content: flex-start;
-  }
-
-  @media (max-width: 992px) {
-    flex-direction: column;
-    align-items: center;
-  }
+  gap: 32px;
+  padding: 60px 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: calc(100vh - 200px);
 
   @media (max-width: 768px) {
-    justify-content: space-between;
-  }
-
-  @media (max-width: 576px) {
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    gap: 24px;
   }
 `;

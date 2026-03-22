@@ -39,26 +39,30 @@ const HomeCarousel = () => {
 export default HomeCarousel;
 
 const CarouselImage = styled.img`
-  border-radius: 2%;
+  border-radius: 20px;
   width: 100%;
   height: auto;
-  max-width: 1000px;
-  max-height: 600px;
-  background-size: cover;
+  max-width: 900px;
+  max-height: 540px;
+  object-fit: cover;
   image-rendering: -webkit-optimize-contrast;
+  box-shadow: 0 20px 50px rgba(45, 42, 38, 0.15);
 
   @media (max-width: 1200px) {
-    max-width: 800px;
-    max-height: 480px;
+    max-width: 700px;
+    max-height: 420px;
+    border-radius: 16px;
   }
 
   @media (max-width: 768px) {
-    max-width: 600px;
-    max-height: 360px;
+    max-width: 500px;
+    max-height: 300px;
+    border-radius: 12px;
   }
 
   @media (max-width: 480px) {
     max-width: 100%;
-    height: 150px;
+    height: 180px;
+    border-radius: 12px;
   }
 `;

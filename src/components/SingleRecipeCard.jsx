@@ -36,21 +36,26 @@ const SingleRecipeCard = ({ recipes }) => {
 export default SingleRecipeCard;
 
 const Card = styled.div`
-  margin: 20px;
-  backdrop-filter: blur(16px) saturate(180%);
-  background-color: rgba(17, 25, 40, 0.25);
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.125);
-  padding: 38px;
-  filter: drop-shadow(0 30px 10px rgba(0, 0, 0, 0.125));
+  background-color: #FFFFFF;
+  border-radius: 24px;
+  border: none;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(45, 42, 38, 0.08);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(45, 42, 38, 0.12);
+  }
 
   @media (max-width: 768px) {
-    padding: 20px;
+    padding: 16px;
+    border-radius: 20px;
   }
 `;
 
@@ -61,55 +66,59 @@ const CardImage = styled.img`
       : "url(https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png)"};
   background-position: center;
   background-size: cover;
-  height: 300px;
-  width: 300px;
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.255);
+  height: 280px;
+  width: 280px;
+  border-radius: 16px;
+  border: none;
+  transition: transform 0.4s ease;
 
   @media (max-width: 768px) {
-    height: 200px;
-    width: 200px;
+    height: 220px;
+    width: 220px;
+    border-radius: 14px;
   }
 `;
 
 const CardTitle = styled.h2`
-  font-family: "Righteous", sans-serif;
-  color: rgba(255, 255, 255, 0.98);
-  font-size: 20px;
+  font-family: 'Playfair Display', Georgia, serif;
+  color: #2D2A26;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 16px 0 8px;
+  line-height: 1.3;
+  max-width: 260px;
 
   @media (max-width: 768px) {
     font-size: 16px;
+    max-width: 200px;
   }
 `;
 
 const ButtonWrapperFirst = styled.div`
-  margin-top: 18px;
-  margin-left: 10px;
+  margin-top: 12px;
 `;
 
 const CardButton = styled.button`
-  border: none;
-  padding: 12px 24px;
-  border-radius: 24px;
+  border: 2px solid #2D2A26;
+  padding: 12px 28px;
+  border-radius: 100px;
   font-size: 12px;
-  font-size: 0.8rem;
-  letter-spacing: 2px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
   cursor: pointer;
-  background: grey;
-  color: white;
-  border: 1px solid grey;
-  transition: all 0.3s ease;
+  background: transparent;
+  color: #2D2A26;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover {
-    transform: scale(1.125);
-    background-color: #333;
-    color: rgba(255, 255, 255, 0.9);
-    border-color: white;
-    transition: all .3s ease;
+    background-color: #2D2A26;
+    color: #FFFFFF;
+    transform: scale(1.02);
   }
 
   @media (max-width: 768px) {
-    padding: 10px 20px;
-    font-size: 10px;
+    padding: 10px 24px;
+    font-size: 11px;
   }
 `;

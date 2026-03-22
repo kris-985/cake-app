@@ -36,62 +36,56 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: pink;
-  border-bottom: 2px solid black;
-  padding: 0 20px;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid rgba(45, 42, 38, 0.08);
+  padding: 0 60px;
   height: 80px;
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(20px);
+  background-color: rgba(255, 255, 255, 0.95);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
   @media (max-width: 1200px) {
-    padding: 0 15px;
-    height: 70px;
+    padding: 0 40px;
+    height: 76px;
   }
 
   @media (max-width: 992px) {
-    padding: 0 10px;
-    height: 60px;
+    padding: 0 30px;
+    height: 72px;
   }
 
   @media (max-width: 768px) {
-    padding: 0 5px;
-    height: 50px;
+    padding: 0 24px;
+    height: 68px;
   }
 
   @media (max-width: 480px) {
     flex-direction: column;
-    height: ${({ extendBar }) => (extendBar ? "240px" : "40px")};
-    ${({ extendBar }) => extendBar && "padding-top: 10px;"};
-    justify-content: center;
-    align-items: flex-end;
-  }
-
-  @media (max-width: 400px) {
-    justify-content: center;
-    align-items: flex-end;
-    flex-direction: column;
-    height: ${({ extendBar }) => (extendBar ? "240px" : "40px")};
-    ${({ extendBar }) => extendBar && "padding-top: 10px;"};
+    height: ${({ extendBar }) => (extendBar ? "auto" : "64px")};
+    padding: ${({ extendBar }) => (extendBar ? "16px 20px 24px" : "0 20px")};
+    justify-content: ${({ extendBar }) => (extendBar ? "flex-start" : "center")};
+    align-items: ${({ extendBar }) => (extendBar ? "stretch" : "center")};
+    gap: ${({ extendBar }) => (extendBar ? "16px" : "0")};
   }
 `;
 
 const LogoImage = styled.img`
-  width: 100px;
-  height: 80px;
+  width: 56px;
+  height: 56px;
   cursor: pointer;
-
-  @media (max-width: 1200px) {
-    width: 90px;
-    height: 70px;
-  }
-
-  @media (max-width: 992px) {
-    width: 80px;
-    height: 60px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  
+  &:hover {
+    transform: scale(1.05);
   }
 
   @media (max-width: 768px) {
-    width: 70px;
-    height: 50px;
+    width: 48px;
+    height: 48px;
   }
 
   @media (max-width: 480px) {
@@ -102,67 +96,52 @@ const LogoImage = styled.img`
 const NavLinks = styled.div`
   display: flex;
   align-items: center;
-
-  @media (max-width: 1200px) {
-    gap: 30px;
-  }
-
-  @media (max-width: 992px) {
-    gap: 20px;
-  }
-
-  @media (max-width: 768px) {
-    gap: 10px;
-  }
+  gap: 8px;
 
   @media (max-width: 480px) {
     flex-direction: column;
     width: 100%;
     display: ${({ extendBar }) => (extendBar ? "flex" : "none")};
-  }
-
-  @media (max-width: 400px) {
-    flex-direction: column;
-    width: 100%;
-    display: ${({ extendBar }) => (extendBar ? "flex" : "none")};
+    gap: 4px;
+    background: #FAF7F2;
+    border-radius: 16px;
+    padding: 8px;
   }
 `;
 
 const Navlink = styled(Link)`
   text-decoration: none;
-  color: black;
-  text-transform: uppercase;
-  font-family: cursive;
-  font-size: 25px;
+  color: #2D2A26;
+  text-transform: none;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
   cursor: pointer;
-  margin-right: 40px;
+  padding: 10px 20px;
+  border-radius: 100px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
 
   &:hover {
-    background-color: pink;
-    color: white;
-  }
-
-  @media (max-width: 1200px) {
-    font-size: 22px;
-    margin-right: 30px;
-  }
-
-  @media (max-width: 992px) {
-    font-size: 20px;
-    margin-right: 20px;
+    background-color: #FAF7F2;
+    color: #C4A265;
   }
 
   @media (max-width: 768px) {
-    font-size: 18px;
-    margin-right: 10px;
+    font-size: 14px;
+    padding: 8px 16px;
   }
 
   @media (max-width: 480px) {
-    margin: 10px 0;
-  }
-
-  @media (max-width: 400px) {
-    margin: 10px 0;
+    width: 100%;
+    text-align: center;
+    padding: 14px 20px;
+    border-radius: 12px;
+    
+    &:hover {
+      background-color: #FFFFFF;
+    }
   }
 `;
 
@@ -170,12 +149,20 @@ const MenuWrapper = styled.span`
   cursor: pointer;
   display: none;
   position: relative;
-
-  @media (max-width: 480px) {
-    display: block;
+  padding: 10px;
+  border-radius: 12px;
+  color: #2D2A26;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background-color: #FAF7F2;
+    color: #C4A265;
   }
 
-  @media (max-width: 400px) {
-    display: block;
+  @media (max-width: 480px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-end;
   }
 `;

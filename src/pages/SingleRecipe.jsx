@@ -56,30 +56,38 @@ export default SingleRecipe;
 
 const Title = styled.h1`
   text-align: center;
-  font-size: 2em;
-
-  @media (max-width: 480px) {
-    font-size: 1.2em;
-  }
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.5em;
+  font-weight: 600;
+  color: #2D2A26;
+  margin: 40px 20px 32px;
+  line-height: 1.2;
 
   @media (max-width: 768px) {
+    font-size: 1.8em;
+    margin: 32px 16px 24px;
+  }
+
+  @media (max-width: 480px) {
     font-size: 1.5em;
+    margin: 24px 12px 20px;
   }
 `;
 
 const Container = styled.div`
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-wrap: wrap;
-
-  @media (max-width: 480px) {
-    flex-direction: column;
-    align-items: center;
-  }
+  gap: 48px;
+  padding: 0 60px 48px;
+  max-width: 1200px;
+  margin: 0 auto;
 
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
+    padding: 0 24px 32px;
+    gap: 32px;
   }
 `;
 
@@ -90,50 +98,101 @@ const Picture = styled.div`
       : "url(https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png)"};
   background-position: center;
   background-size: cover;
-  height: 500px;
-  width: 500px;
+  height: 450px;
+  width: 450px;
+  border-radius: 24px;
+  box-shadow: 0 20px 50px rgba(45, 42, 38, 0.15);
 
-  @media (max-width: 480px) {
-    height: 300px;
-    width: 300px;
+  @media (max-width: 768px) {
+    height: 350px;
+    width: 350px;
+    border-radius: 20px;
   }
 
+  @media (max-width: 480px) {
+    height: 280px;
+    width: 280px;
+    border-radius: 16px;
+  }
 `;
 
 const Text = styled.p`
-  font-family: cursive;
-  font-size: 20px;
-
-  @media (max-width: 480px) {
-    font-size: 16px;
-  }
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  color: #2D2A26;
+  line-height: 1.8;
 
   @media (max-width: 768px) {
-    font-size: 18px;
+    font-size: 15px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 14px;
   }
 `;
 
-const Ingredients = styled(Text)``;
-const Category = styled(Text)``;
-const Area = styled(Text)``;
+const Ingredients = styled(Text)`
+  background-color: #FFFFFF;
+  padding: 24px 32px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(45, 42, 38, 0.08);
+  font-weight: 600;
+  color: #C4A265;
+  
+  li {
+    font-weight: 400;
+    color: #2D2A26;
+    margin: 8px 0;
+    padding-left: 8px;
+  }
+`;
+
+const Category = styled(Text)`
+  background-color: #FFFFFF;
+  padding: 16px 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(45, 42, 38, 0.08);
+  font-weight: 500;
+`;
+
+const Area = styled(Text)`
+  background-color: #FFFFFF;
+  padding: 16px 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(45, 42, 38, 0.08);
+  font-weight: 500;
+`;
 
 const ContInstructions = styled.div`
-  font-family: cursive;
-  font-size: 20px;
-  margin-left: 10px;
-  margin-top: 15px;
-
-  @media (max-width: 480px) {
-    font-size: 16px;
-    margin-left: 3px;
-    margin-top: 8px;
-  }
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  max-width: 900px;
+  margin: 0 auto 60px;
+  padding: 32px 48px;
+  background-color: #FFFFFF;
+  border-radius: 24px;
+  box-shadow: 0 4px 20px rgba(45, 42, 38, 0.08);
+  color: #C4A265;
+  font-weight: 600;
 
   @media (max-width: 768px) {
-    font-size: 18px;
-    margin-left: 5px;
-    margin-top: 10px;
+    font-size: 15px;
+    padding: 24px 32px;
+    margin: 0 24px 40px;
+    border-radius: 20px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 14px;
+    padding: 20px 24px;
+    margin: 0 16px 32px;
+    border-radius: 16px;
   }
 `;
 
-const Instructions = styled(Text)``;
+const Instructions = styled(Text)`
+  color: #6B6560;
+  font-weight: 400;
+  margin-top: 16px;
+  white-space: pre-line;
+`;

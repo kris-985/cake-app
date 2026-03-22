@@ -53,16 +53,24 @@ const AboutUs = () => {
 export default AboutUs;
 
 const Header = styled.h1`
-  font-family: cursive;
-  font-size: 30px;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 42px;
+  font-weight: 600;
   text-align: center;
-
-  @media (max-width: 480px) {
-    font-size: 20px;
-  }
+  color: #2D2A26;
+  padding: 60px 40px 20px;
+  line-height: 1.3;
+  max-width: 900px;
+  margin: 0 auto;
 
   @media (max-width: 768px) {
-    font-size: 24px;
+    font-size: 32px;
+    padding: 40px 24px 16px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 26px;
+    padding: 32px 20px 12px;
   }
 `;
 
@@ -70,25 +78,22 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
-
-  @media (max-width: 480px) {
-    padding: 10px;
-    flex-direction: column;
-  }
+  padding: 48px 60px;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
 
   @media (max-width: 768px) {
-    padding: 10px;
+    padding: 32px 24px;
     flex-direction: column;
+    gap: 32px;
   }
 `;
 
 const ImageSection = styled.div`
   flex: 1;
-
-  @media (max-width: 480px) {
-    width: 100%;
-  }
+  display: flex;
+  justify-content: center;
 
   @media (max-width: 768px) {
     width: 100%;
@@ -97,118 +102,124 @@ const ImageSection = styled.div`
 
 const TextSection = styled.div`
   flex: 1;
-  padding: 0 30px;
-
-  @media (max-width: 480px) {
-    padding: 10px 0;
-  }
 
   @media (max-width: 768px) {
-    padding: 10px 0;
+    text-align: center;
   }
 `;
 
 const Image = styled.img`
-  margin-left: 20px;
   max-width: 100%;
-  height: 450px;
-  border-radius: 2%;
-
-  @media (max-width: 480px) {
-    margin-left: 0;
-    width: 100%;
-    height: auto;
-  }
+  height: 400px;
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow: 0 20px 50px rgba(45, 42, 38, 0.15);
 
   @media (max-width: 768px) {
-    margin-left: 0;
-    height: auto;
+    height: 300px;
+    border-radius: 20px;
+  }
+
+  @media (max-width: 480px) {
+    height: 250px;
+    border-radius: 16px;
   }
 `;
 
 const Text = styled.p`
-  font-family: cursive;
-  font-size: 30px;
-  line-height: 2;
-
-  @media (max-width: 480px) {
-    font-size: 20px;
-  }
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #6B6560;
 
   @media (max-width: 768px) {
-    font-size: 24px;
+    font-size: 16px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 15px;
   }
 `;
 
 const ContainerSecond = styled.div`
   display: flex;
   align-items: center;
-
-  @media (max-width: 480px) {
-    flex-direction: column-reverse;
-  }
+  gap: 60px;
+  padding: 48px 60px;
+  max-width: 1200px;
+  margin: 0 auto;
 
   @media (max-width: 768px) {
     flex-direction: column-reverse;
+    padding: 32px 24px;
+    gap: 32px;
   }
 `;
 
 const TextSecond = styled.div`
   flex: 1;
-  font-family: cursive;
-  font-size: 30px;
-  padding: 0 20px;
-  line-height: 2;
-
-  @media (max-width: 480px) {
-    font-size: 20px;
-    padding: 10px 0;
-  }
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #6B6560;
 
   @media (max-width: 768px) {
-    font-size: 24px;
-    padding: 10px 0;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 15px;
   }
 `;
 
 const ImageRight = styled.img`
-  margin-right: 20px;
-  height: 500px;
+  height: 400px;
   max-width: 100%;
-  border-radius: 2%;
-
-  @media (max-width: 480px) {
-    margin-right: 0;
-    width: 100%;
-    height: auto;
-  }
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow: 0 20px 50px rgba(45, 42, 38, 0.15);
 
   @media (max-width: 768px) {
-    margin-right: 0;
-    height: auto;
+    height: 300px;
+    border-radius: 20px;
+  }
+
+  @media (max-width: 480px) {
+    height: 250px;
+    border-radius: 16px;
   }
 `;
 
 const Button = styled.button`
-  margin-top: 10px;
-  margin-left: 20px;
-  margin-bottom: 20px;
   display: block;
-  padding: 10px 20px;
-  background-color: #333;
+  margin: 20px auto 60px;
+  padding: 18px 48px;
+  background-color: #2D2A26;
+  color: #FFFFFF;
   border: none;
-  border-radius: 5px;
+  border-radius: 100px;
   cursor: pointer;
-  text-decoration: none;
+  font-size: 15px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 20px rgba(45, 42, 38, 0.15);
+
+  &:hover {
+    background-color: #C4A265;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(196, 162, 101, 0.3);
+  }
 
   @media (max-width: 480px) {
-    width: 100%;
-    padding: 10px 0;
-    margin-left: 0;
+    padding: 16px 36px;
+    font-size: 14px;
   }
 `;
 
 const RecipeLink = styled(Link)`
-  color: white;
+  color: inherit;
   text-decoration: none;
 `;

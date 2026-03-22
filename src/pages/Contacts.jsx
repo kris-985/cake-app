@@ -48,8 +48,9 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100vh; 
+  min-height: calc(100vh - 80px);
   position: relative;
+  padding: 60px 20px;
 `;
 
 const ImageText = styled.img`
@@ -60,13 +61,21 @@ const ImageText = styled.img`
   top: 0;
   left: 0;
   z-index: 1;
+  filter: brightness(0.85);
 `;
 
 const Title = styled.h2`
-  font-family: cursive;
-  font-size: 24px;
-  margin-bottom: 20px;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 32px;
   z-index: 2;
+  color: #2D2A26;
+
+  @media (max-width: 768px) {
+    font-size: 26px;
+    margin-bottom: 24px;
+  }
 `;
 
 const Form = styled.form`
@@ -75,51 +84,102 @@ const Form = styled.form`
   align-items: center;
   position: relative;
   z-index: 2;
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 20px;
-  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(20px);
+  padding: 48px 56px;
+  border-radius: 28px;
+  box-shadow: 0 20px 60px rgba(45, 42, 38, 0.15);
+  max-width: 560px;
+  width: 100%;
 
   @media (max-width: 768px) {
-    width: 90%;
-    padding: 15px;
+    padding: 36px 28px;
+    border-radius: 24px;
   }
 `;
 
 const InputField = styled.input`
-  width: 600px;
-  max-width: 900px;
-  height: 40px;
-  margin-bottom: 10px;
-  padding: 5px;
-  font-size: 16px;
-  border-radius: 2px;
+  width: 100%;
+  height: 52px;
+  margin-bottom: 16px;
+  padding: 0 20px;
+  font-size: 15px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  border-radius: 14px;
+  border: 2px solid #E8D5D0;
+  background-color: #FAF7F2;
+  color: #2D2A26;
+  transition: all 0.3s ease;
+  
+  &:focus {
+    outline: none;
+    border-color: #C4A265;
+    background-color: #FFFFFF;
+  }
+  
+  &::placeholder {
+    color: #6B6560;
+  }
 
   @media (max-width: 768px) {
-    width: 100%;
+    height: 48px;
+    font-size: 14px;
   }
 `;
 
 const MessageField = styled.textarea`
-  width: 600px;
-  max-width: 900px;
-  height: 120px;
-  margin-bottom: 10px;
-  padding: 5px;
-  font-size: 16px;
-  border-radius: 2px;
+  width: 100%;
+  height: 140px;
+  margin-bottom: 24px;
+  padding: 16px 20px;
+  font-size: 15px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  border-radius: 14px;
+  border: 2px solid #E8D5D0;
+  background-color: #FAF7F2;
+  color: #2D2A26;
+  resize: vertical;
+  transition: all 0.3s ease;
+  
+  &:focus {
+    outline: none;
+    border-color: #C4A265;
+    background-color: #FFFFFF;
+  }
+  
+  &::placeholder {
+    color: #6B6560;
+  }
 
   @media (max-width: 768px) {
-    width: 100%;
+    height: 120px;
+    font-size: 14px;
   }
 `;
 
 const SubmitButton = styled.button`
-  width: 200px;
-  height: 40px;
-  background-color: #333;
-  color: white;
+  width: 100%;
+  height: 52px;
+  background-color: #2D2A26;
+  color: #FFFFFF;
   border: none;
-  border-radius: 5px;
-  font-size: 18px;
+  border-radius: 100px;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  letter-spacing: 0.05em;
   cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 20px rgba(45, 42, 38, 0.15);
+
+  &:hover {
+    background-color: #C4A265;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(196, 162, 101, 0.3);
+  }
+
+  @media (max-width: 768px) {
+    height: 48px;
+    font-size: 14px;
+  }
 `;
